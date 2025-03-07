@@ -1,6 +1,4 @@
 const ScheduleSchema = require('../models/schedule');
-const mongoose = require('mongoose');
-
 
 
 const create = async (req, res) => {
@@ -35,7 +33,7 @@ const create = async (req, res) => {
     }
 };
 
-const findAll = async (res) => {
+const findAll = async (req, res) => {
     try {
         const allSchedules = await ScheduleSchema.find();
 
@@ -45,7 +43,6 @@ const findAll = async (res) => {
     } catch (error) {
         return res.status(500).json({ message: error.message });
     }
-
 };
 
 const update = async (req, res) => {
