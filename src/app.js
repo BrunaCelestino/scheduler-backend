@@ -5,7 +5,7 @@ const cors = require('cors');
 
 app.use(cors());
 
-require('dotenv-safe').config();
+require('dotenv').config();
 
 const db = require('./database/databaseConfig');
 
